@@ -26,7 +26,6 @@ class AuthController extends Controller
         if (!Auth::attempt($valid->only(['email', 'password']))) {
             return $json->error(['unauthorized'], 401);
         }
-
         $time = Time::factory()->getTimestamp();
         $token = JWT::encode(
             [
