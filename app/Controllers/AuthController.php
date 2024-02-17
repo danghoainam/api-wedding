@@ -14,7 +14,6 @@ class AuthController extends Controller
 {
     public function login(Request $request, JsonResponse $json): JsonResponse
     {
-        return 1;
         $valid = Validator::make($request->only(['email', 'password']), [
             'email' => ['required', 'str', 'trim', 'min:5', 'max:30'],
             'password' => ['required', 'str', 'trim', 'min:8', 'max:20']
@@ -23,6 +22,11 @@ class AuthController extends Controller
         if ($valid->fails()) {
             return $json->error($valid->messages(), 400);
         }
+
+        return $json->success([
+            'token' => 111,
+            'user' => Auth::user()->only('nama')
+        ], 200);
 
         if (!Auth::attempt($valid->only(['email', 'password']))) {
             return $json->error(['unauthorized'], 401);
