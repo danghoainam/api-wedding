@@ -14,6 +14,7 @@ class AuthController extends Controller
 {
     public function login(Request $request, JsonResponse $json): JsonResponse
     {
+        return 1;
         $valid = Validator::make($request->only(['email', 'password']), [
             'email' => ['required', 'str', 'trim', 'min:5', 'max:30'],
             'password' => ['required', 'str', 'trim', 'min:8', 'max:20']
@@ -38,7 +39,7 @@ class AuthController extends Controller
             env('JWT_KEY'),
             env('JWT_ALGO', 'HS256')
         );
-        return 1;
+
         return $json->success([
             'token' => $token,
             'user' => Auth::user()->only('nama')
