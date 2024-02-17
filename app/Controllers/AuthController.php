@@ -38,7 +38,7 @@ class AuthController extends Controller
             env('JWT_KEY'),
             env('JWT_ALGO', 'HS256')
         );
-
+        return 1;
         return $json->success([
             'token' => $token,
             'user' => Auth::user()->only('nama')
