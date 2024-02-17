@@ -23,11 +23,6 @@ class AuthController extends Controller
             return $json->error($valid->messages(), 400);
         }
 
-        return $json->success([
-            'token' => 111,
-            'user' => Auth::user()->only('nama')
-        ], 200);
-
         if (!Auth::attempt($valid->only(['email', 'password']))) {
             return $json->error(['unauthorized'], 401);
         }
