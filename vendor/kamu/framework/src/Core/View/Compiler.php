@@ -298,9 +298,9 @@ class Compiler
             @mkdir(base_path($this->originCachePath), 0777, true);
         }
 
-        if (!(bool) @file_put_contents($file . '.php', $content)) {
-            throw new Exception(sprintf('Can\'t save file [%s.php]', $this->cachePath));
-        }
+        // if (!(bool) @file_put_contents($file . '.php', $content)) {
+        //     throw new Exception(sprintf('Can\'t save file [%s.php]', $this->cachePath));
+        // }
     }
 
     /**
