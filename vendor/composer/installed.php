@@ -3,7 +3,7 @@
         'name' => 'kamu/kamu',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c380969fd6aa2625983d0b0c7244c478df4da04c',
+        'reference' => '1d78c137d29355b093147b7484c779b57d59dad7',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -40,7 +40,7 @@
         'kamu/kamu' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c380969fd6aa2625983d0b0c7244c478df4da04c',
+            'reference' => '1d78c137d29355b093147b7484c779b57d59dad7',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
