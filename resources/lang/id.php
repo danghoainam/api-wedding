@@ -14,15 +14,15 @@ return [
      */
     \Core\Support\Time::NAME => [
 
-        'y' => 'tahun',
-        'm' => 'bulan',
-        'd' => 'hari',
-        'h' => 'jam',
-        'i' => 'menit',
-        's' => 'detik',
+        'y' => 'năm',
+        'm' => 'tháng',
+        'd' => 'ngày',
+        'h' => 'giờ',
+        'i' => 'phút',
+        's' => 'giây',
 
-        'ago' => 'yang lalu.',
-        'recently' => 'baru saja.',
+        'ago' => 'trước.',
+        'recently' => 'vừa mới.'
     ],
 
     /**
