@@ -121,9 +121,9 @@ class Error
         }
 
         $status = @file_put_contents($absoluteFile, $this->information . PHP_EOL, FILE_USE_INCLUDE_PATH | FILE_APPEND | LOCK_EX);
-        if (!$status) {
-            throw new Exception('Error could not save log file');
-        }
+        // if (!$status) {
+        //     throw new Exception('Error could not save log file');
+        // }
 
         return $this;
     }
